@@ -1,14 +1,9 @@
-// App.js
 import * as React from 'react';
 import { View, Text, StyleSheet, Image, TouchableOpacity, ImageBackground } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { Ionicons } from '@expo/vector-icons'; // For icons
-
-// Create Bottom Tab Navigator
+import { Ionicons } from '@expo/vector-icons';
 const Tab = createBottomTabNavigator();
-
-// Home Screen Component
 function HomeScreen() {
   return (
     <View style={styles.container}>
@@ -20,7 +15,6 @@ function HomeScreen() {
           style={styles.profilePic} 
           source={{uri: 'https://cdn.glitch.global/c69337a1-a1fd-4ee0-b666-1632f9580033/anh-anime-den-trang-dep_104426602-762x1024.jpg?v=1702797707270'}} 
         />
-        
       </View>
       <Text style={styles.userName}>Your Insights</Text>
       {/* Insights Section */}
@@ -55,8 +49,6 @@ function HomeScreen() {
     </View>
   );
 }
-
-// Scan Screen Component
 function ScanScreen({ navigation }) {
   return (
     <View style={styles.scanContainer}>
@@ -77,8 +69,6 @@ function ScanScreen({ navigation }) {
     </View>
   );
 }
-
-// Main App Component
 export default function App() {
   return (
     <NavigationContainer>
@@ -105,8 +95,6 @@ export default function App() {
     </NavigationContainer>
   );
 }
-
-// Styles for the App
 const styles = StyleSheet.create({
   container: {
     flex: 1,
